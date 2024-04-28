@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Exercise Frontend Mentor, Age calculator app">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <title>Frontend Mentor | Age calculator app</title>
+    </head>
+    <body>
+ 
+      <main class="container">
+
+        <h1 class="sr-only">age calculator app</h1>
+
+        <form class="form-container" id="myForm" action="./index.html" novalidate>
+
+          <div class="display-input">
+
+            <div class="input-position">
+              <label class="label-text" for="day">day</label>
+              <input class="input-text" type="tel" id="day" name="day" placeholder="DD" minlength="1" maxlength="2" pattern="[1-9]{1}|[0-2]{1}[0-9]{1}|[3]{1}[0-1]{1}" required><!-- pattern="[1-9]{1}|[0-3]{1}[0-9]{1}" pattern="[0-9]{1,2}" -->
+              <span class="messError"></span>
+            </div>
+
+            <div class="input-position">
+              <label class="label-text" for="month">month</label>
+              <input class="input-text" type="tel" id="month" name="month" placeholder="MM" minlength="1" maxlength="2" pattern="[1-9]{1}|[0]{1}[0-9]{1}|[1]{1}[0-2]{1}" required><!-- pattern=" [1-9]{1}|[0-1]{1}[0-9]{1} " -->
+              <span class="messError"></span>
+            </div>
+              
+            <div class="input-position">
+              <label class="label-text" for="year">year</label>
+              <input class="input-text" type="tel" id="year" name="year" placeholder="YYYY" minlength="4" maxlength="4" pattern="[0-9]{4}" required><!-- pattern="[0-9]{4}" -->
+              <span class="messError"></span>
+            </div>
+              
+          </div>
+
+          <div class="line"></div>
+
+          <button class="button-form" id="button" type="submit" form="myForm"></button>            
+          
+        </form>
+
+        <div class="result">
+          <p><span id="result-years">--</span> years</p>
+          <p><span id="result-months">--</span> months</p>
+          <p><span id="result-days">--</span> days</p>
+        </div>
+
+      </main>
+
+    <script  src="./script.js"></script>
+
+    </body>
+
+</html>
